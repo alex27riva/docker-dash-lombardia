@@ -3,8 +3,8 @@ from datetime import date
 
 import dash
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 import pandas
 
 # data URL
@@ -22,7 +22,7 @@ app = dash.Dash(__name__,
                 external_scripts=plotly_js_minified,
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5'}],
-				requests_pathname_prefix='/lombardy/',
+                requests_pathname_prefix='/lombardy/',
                 routes_pathname_prefix='/lombardy/'
                 )
 app.title = 'Dashboard Lombardia'
